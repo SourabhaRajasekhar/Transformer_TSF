@@ -85,8 +85,10 @@ elif dataset=="ett":
     df = pd.read_csv("./dataset/final_data/ett/ett.csv") 
     df=np.asarray( df.iloc[:,1:] ) 
     df_know=np.asarray(pd.read_csv(knowledge_pred_path,header=None))
-    test_size=int(df.shape[0]*0.2)
-    validation_size=int(df.shape[0]*0.2 + test_size)
+    #test_size=int(df.shape[0]*0.2)
+    #validation_size=int(df.shape[0]*0.2 + test_size)
+    test_size=23600#11424#11520
+    validation_size=11520+test_size#11520+test_size
 elif dataset=="weather":
     df = pd.read_csv("./dataset/final_data/weather/weather.csv" ) 
     df=np.asarray( df.iloc[:,1:] ) 
